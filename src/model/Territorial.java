@@ -29,30 +29,33 @@ public class Territorial extends CalcBase{
         cb.setIntervalo(47724);
         dados.add(cb);
         
-        cb.setAliquota(1.60);
-        cb.setValorInicial(47724);
-        cb.setValorFinal(357939);
-        cb.setIntervalo(310215);
-        dados.add(cb);
+        CalcBase cb1 = new CalcBase();
+        cb1.setAliquota(1.60);
+        cb1.setValorInicial(47724);
+        cb1.setValorFinal(357939);
+        cb1.setIntervalo(310215);
+        dados.add(cb1);
         
-        cb.setAliquota(2.00);
-        cb.setValorInicial(357939);
-        cb.setValorFinal(715879);
-        cb.setIntervalo(357940);
-        dados.add(cb);
+        CalcBase cb2 = new CalcBase();
+        cb2.setAliquota(2.00);
+        cb2.setValorInicial(357939);
+        cb2.setValorFinal(715879);
+        cb2.setIntervalo(357940);
+        dados.add(cb2);
         
-        cb.setAliquota(2.50);
-        cb.setValorInicial(715879);
-        cb.setValorFinal(1193131);
-        cb.setIntervalo(477252);
-        dados.add(cb);
+        CalcBase cb3 = new CalcBase();
+        cb3.setAliquota(2.50);
+        cb3.setValorInicial(715879);
+        cb3.setValorFinal(1193131);
+        cb3.setIntervalo(477252);
+        dados.add(cb3);
         
-        cb.setAliquota(3.00);
-        cb.setValorInicial(1193131);
-        cb.setValorFinal(999999999);
-        cb.setIntervalo(238626);
-        dados.add(cb);
-        
+        CalcBase cb4 = new CalcBase();
+        cb4.setAliquota(3.00);
+        cb4.setValorInicial(1193131);
+        cb4.setValorFinal(999999999);
+        cb4.setIntervalo(238626);
+        dados.add(cb4);
         
         
     }
