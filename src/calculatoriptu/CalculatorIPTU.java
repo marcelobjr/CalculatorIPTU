@@ -36,17 +36,26 @@ public class CalculatorIPTU {
             default:
                  System.out.println("Tipo informado nao e válido!");
          }
-        
+     double intervalo = 0;
+     double total = 0;
         for (CalcBase obj : list) {
-            if (valorVenal <= obj.getValorFinal()) {
-                totalIPTU = (valorVenal * obj.getAliquota()) / 100;
-                break;
+            
+            if (valorVenal >= obj.getValorFinal()) {
+                total = (obj.getIntervalo() * obj.getAliquota()) / 100;
+                totalIPTU = total + totalIPTU;
+                intervalo = obj.getIntervalo();
+
             } else {
-                
-                
+                intervalo = valorVenal - obj.getValorInicial();
+                total = (intervalo * obj.getAliquota()) / 100;
+                totalIPTU = total + totalIPTU;
+                System.err.println(valorVenal + " = " + intervalo + " x " + obj.getAliquota() + "% = "+ total);
+                    break;
+
             }
+            System.err.println(valorVenal + " = " + intervalo + " x " + obj.getAliquota() + "% = "+ total);
         }
-        
+         
         System.err.println(totalIPTU);
         
     }
@@ -57,7 +66,7 @@ public class CalculatorIPTU {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        new CalculatorIPTU().calculator(95450.00, 1);
+        new CalculatorIPTU().calculator(430000.00, 2);
     }
     
 }
