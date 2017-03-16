@@ -22,48 +22,40 @@ public class NaoResidencial extends CalcBase{
         this.dados  = new ArrayList();
         
         CalcBase cb = new CalcBase();
-        
-        cb.setAliquota(0.60);
+        cb.setAliquota(1.20);
         cb.setValorInicial(0);
-        cb.setValorFinal(95450);
-        cb.setIntervalo(95450);
+        cb.setValorFinal(35793);
+        cb.setIntervalo(35793);
         dados.add(cb);
         
-        cb.setAliquota(0.70);
-        cb.setValorInicial(95450);
-        cb.setValorFinal(238626);
-        cb.setIntervalo(143176);
-        dados.add(cb);
+        CalcBase cb1 = new CalcBase();
+        cb1.setAliquota(1.30);
+        cb1.setValorInicial(35793);
+        cb1.setValorFinal(119131);
+        cb1.setIntervalo(83520);
+        dados.add(cb1);
         
-        cb.setAliquota(0.75);
-        cb.setValorInicial(238626);
-        cb.setValorFinal(417596);
-        cb.setIntervalo(178970);
-        dados.add(cb);
+        CalcBase cb2 = new CalcBase();
+        cb2.setAliquota(1.40);
+        cb2.setValorInicial(119131);
+        cb2.setValorFinal(596565);
+        cb2.setIntervalo(477252);
+        dados.add(cb2);
         
-        cb.setAliquota(0.80);
-        cb.setValorInicial(417596);
-        cb.setValorFinal(715879);
-        cb.setIntervalo(298283);
-        dados.add(cb);
+        CalcBase cb3 = new CalcBase();
+        cb3.setAliquota(1.50);
+        cb3.setValorInicial(596565);
+        cb3.setValorFinal(1193131);
+        cb3.setIntervalo(596566);
+        dados.add(cb3);
         
-        cb.setAliquota(0.85);
-        cb.setValorInicial(715879);
-        cb.setValorFinal(954505);
-        cb.setIntervalo(238626);
-        dados.add(cb);
+        CalcBase cb4 = new CalcBase();
+        cb4.setAliquota(1.60);
+        cb4.setValorInicial(1193131);
+        cb4.setValorFinal(999999999);
+        cb4.setIntervalo(596566);
+        dados.add(cb4);
         
-        cb.setAliquota(0.90);
-        cb.setValorInicial(954505);
-        cb.setValorFinal(1193131);
-        cb.setIntervalo(238626);
-        dados.add(cb);
-        
-        cb.setAliquota(1.00);
-        cb.setValorInicial(1193131);
-        cb.setValorFinal(999999999);
-        cb.setIntervalo(238626);
-        dados.add(cb);
         
         
     }
