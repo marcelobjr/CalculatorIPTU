@@ -17,6 +17,7 @@ public class CalculatorIPTU {
 
     public void calculator(double valorVenal, int tipo) {
         
+        
         ArrayList<CalcBase> list = null;
         double totalIPTU = 0.0;
         
@@ -24,18 +25,23 @@ public class CalculatorIPTU {
             case 1:
                 Residencial res = new Residencial();
                 list = res.getDados();
+                System.out.println("Tipo informado para Calculo Residencial!");
                 break;
             case 2:
                 Territorial ter = new Territorial();
                 list = ter.getDados();
+                System.out.println("Tipo informado para Calculo Territorial!");
                 break;
             case 3:
                 NaoResidencial nores = new NaoResidencial();
                 list = nores.getDados();
+                System.out.println("Tipo informado para Calculo Não Residencial!");
                 break;
             default:
                  System.out.println("Tipo informado nao e válido!");
+                
          }
+        
      double intervalo = 0;
      double total = 0;
         for (CalcBase obj : list) {
@@ -49,14 +55,15 @@ public class CalculatorIPTU {
                 intervalo = valorVenal - obj.getValorInicial();
                 total = (intervalo * obj.getAliquota()) / 100;
                 totalIPTU = total + totalIPTU;
-                System.err.println(valorVenal + " = " + intervalo + " x " + obj.getAliquota() + "% = "+ total);
+                System.err.println(intervalo + " x " + obj.getAliquota() + "% = "+ total);
                     break;
 
             }
-            System.err.println(valorVenal + " = " + intervalo + " x " + obj.getAliquota() + "% = "+ total);
+            System.err.println(intervalo + " x " + obj.getAliquota() + "% = "+ total);
         }
          
-        System.err.println(totalIPTU);
+        System.err.println("Valor IPTU a pagar : R$ "+ totalIPTU);
+        System.out.println("Valor venal informado! = "+ valorVenal );
         
     }
 
@@ -66,7 +73,7 @@ public class CalculatorIPTU {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        new CalculatorIPTU().calculator(430000.00, 2);
+        new CalculatorIPTU().calculator(180000.00, 1);
     }
     
 }
